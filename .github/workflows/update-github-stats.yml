@@ -1,0 +1,57 @@
+name: Update GitHub Stats & Snake
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # daily at 02:00 UTC
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Create folder
+        run: |
+          mkdir -p assets/github-stats
+
+      - name: Download SVGs (Stats & Languages)
+        env:
+          USERNAME: rafaellaurentino
+        run: |
+          STATS_URL="https://github-stats-extended.vercel.app/api?username=${USERNAME}&show_icons=true&theme=tokyonight&count_private=true"
+          LANG_URL="https://github-stats-extended.vercel.app/api/top-langs/?username=${USERNAME}&layout=compact&theme=tokyonight"
+          
+          echo "Fetching stats from $STATS_URL"
+          curl -sSf "$STATS_URL" -o assets/github-stats/stats.svg || echo "Failed to fetch stats"
+          echo "Fetching langs from $LANG_URL"
+          curl -sSf "$LANG_URL" -o assets/github-stats/langs.svg || echo "Failed to fetch langs"
+
+      - name: Generate contribution snake animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: rafaellaurentino
+          outputs: |
+            assets/github-stats/github-snake.svg
+            assets/github-stats/github-snake-dark.svg?palette=github-dark
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats/*.svg || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update stats and snake SVGs"
+            git push
+          else
+            echo "No changes to commit"
+          fi
