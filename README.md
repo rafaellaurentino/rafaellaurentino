@@ -14,7 +14,7 @@
 
 # 👋 About Me
 
-I'm a **Python Developer** passionate about building software that solves real business problems.
+I use Python to transform data into insights, automate business processes, and build applications that solve real-world problems.
 
 My main interests include:
 
