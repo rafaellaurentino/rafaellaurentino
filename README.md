@@ -186,7 +186,7 @@ Real-world SQL queries and data analysis projects.
 
 </a>
 
-<a href="https://linkedin.com/in/rafaellaurentino">
+<a href="https://www.linkedin.com/in/rafaellaurentinodasilva/">
 
 <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin"/>
 
