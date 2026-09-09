@@ -6,7 +6,7 @@
 
 # Rafael Silva
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1200&center=true&vCenter=true&width=900&lines=Python+Developer;Data+Analyst;Automation+Developer;Building+Real+World+Solutions" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1200&center=true&vCenter=true&width=900&lines=Python+Developer;Data+Engineer;Automation+Developer;Building+Real+World+Solutions" />
 
 </div>
 
