@@ -58,6 +58,22 @@ Software Analysis and Development student passionate about Data Engineering and 
   <img width="100%" src="https://github-readme-activity-graph-gold-gamma.vercel.app/graph?username=rafaellaurentino&bg_color=00000000&color=2ea043&line=2ea043&point=c9d1d9&area=true&hide_border=true" alt="activity graph" />
 </p>
 
+---
+
+# 🐍 Contribution Snake
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-stats/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/github-stats/github-snake.svg" />
+  <img alt="github-snake" src="./assets/github-stats/github-snake.svg" />
+</picture>
+
+</div>
+
+---
+
 ### 💭 Dev Quote
 
 <p align="center">
